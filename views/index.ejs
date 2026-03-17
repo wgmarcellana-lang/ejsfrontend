@@ -23,93 +23,12 @@
 
         <form id="basic-form" class="form-shell">
           <div class="field-grid">
-            
-            <%# input text %>
-            <div class="field-full">
-              <label for="text-input" class="field-label">Text Input</label>
-              <input
-                id="text-input"
-                type="text"
-                placeholder="Enter text"
-                class="field-input"
-              />
-            </div>
-
-            <%# dropdown %>
-            <div class="field-full">
-              <label for="dropdown-toggle" class="field-label">Dropdown</label>
-              <div id="multi-dropdown" class="relative">
-                <button
-                  id="dropdown-toggle"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="dropdown-panel"
-                  class="dropdown-toggle-button"
-                >
-                  <span id="dropdown-label" class="truncate">Select options</span>
-                  <svg class="h-4 w-4 text-slate-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.51a.75.75 0 01-1.08 0l-4.25-4.51a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-                  </svg>
-                </button>
-
-                <div
-                  id="dropdown-panel"
-                  class="dropdown-panel hidden"
-                >
-                  <input
-                    id="select-search"
-                    type="text"
-                    placeholder="Search options"
-                    class="field-input field-input-soft"
-                  />
-
-                  <div id="selected-tags" class="selected-tags"></div>
-                  <div id="dropdown-options" class="dropdown-options"></div>
-                  <p id="dropdown-empty" class="dropdown-empty hidden">No options found.</p>
-                </div>
-              </div>
-            </div>
-
-            <%# calendar %>
-            <div class="field-full">
-              <div class="field-label">Calendar</div>
-              <div class="calendar-toggle">
-                <label class="calendar-option">
-                  <input type="radio" name="calendar-mode" value="single" class="sr-only" checked />
-                  Date
-                </label>
-                <label class="calendar-option">
-                  <input type="radio" name="calendar-mode" value="range" class="sr-only" />
-                  Date Range
-                </label>
-              </div>
-
-              <div class="date-grid">
-                <div>
-                  <label for="start-date" id="start-date-label" class="field-label">Date</label>
-                  <input
-                    id="start-date"
-                    type="date"
-                    class="field-input"
-                  />
-                </div>
-                <div id="end-date-wrap" class="hidden">
-                  <label for="end-date" class="field-label">End Date</label>
-                  <input
-                    id="end-date"
-                    type="date"
-                    class="field-input"
-                  />
-                </div>
-              </div>
-            </div>
+            <%- include('components/input') %>
+            <%- include('components/dropdown') %>
+            <%- include('components/calendar') %>
           </div>
 
-          <%# buttons %>
-          <div class="form-actions">
-            <button type="reset" class="action-button action-button-secondary">Close</button>
-            <button type="submit" class="action-button action-button-primary">Submit</button>
-          </div>
+          <%- include('components/buttons') %>
         </form>
       </section>
     </main>

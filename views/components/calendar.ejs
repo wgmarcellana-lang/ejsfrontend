@@ -1,0 +1,32 @@
+<div class="field-full">
+  <div class="field-label">Calendar</div>
+  <div class="calendar-toggle">
+    <label class="calendar-option">
+      <input type="radio" name="calendar-mode" value="single" class="sr-only" checked />
+      Date
+    </label>
+    <label class="calendar-option">
+      <input type="radio" name="calendar-mode" value="range" class="sr-only" />
+      Date Range
+    </label>
+  </div>
+
+  <div class="date-grid">
+    <div>
+      <label for="start-date" id="start-date-label" class="field-label">Date</label>
+      <input
+        id="start-date"
+        type="date"
+        class="field-input"
+      />
+    </div>
+    <div id="end-date-wrap" class="hidden">
+      <label for="end-date" class="field-label">End Date</label>
+      <input
+        id="end-date"
+        type="date"
+        class="field-input"
+      />
+    </div>
+  </div>
+</div>
