@@ -1,0 +1,278 @@
+body {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.app-body {
+  min-height: 100vh;
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.app-header {
+  border-bottom: 1px solid #2e1065;
+  background: #4c1d95;
+  color: #ffffff;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+}
+
+.app-header-inner {
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+}
+
+.app-main {
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+.card-shell {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+}
+
+.card-header {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.form-shell {
+  padding: 1.25rem;
+}
+
+.field-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.field-full {
+  grid-column: 1 / -1;
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.field-input {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.field-input:focus {
+  border-color: #06b6d4;
+  box-shadow: 0 0 0 2px #cffafe;
+}
+
+.field-input-soft {
+  margin-bottom: 0.75rem;
+  background: #f8fafc;
+}
+
+.field-input-soft:focus {
+  background: #ffffff;
+}
+
+.dropdown-toggle-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  color: #334155;
+  font-size: 0.875rem;
+  text-align: left;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.dropdown-toggle-button:hover {
+  border-color: #94a3b8;
+}
+
+.dropdown-toggle-button:focus {
+  border-color: #06b6d4;
+  outline: none;
+  box-shadow: 0 0 0 2px #cffafe;
+}
+
+.dropdown-panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 0.375rem);
+  z-index: 20;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  background: #ffffff;
+  box-shadow: 0 10px 15px rgba(15, 23, 42, 0.12);
+}
+
+.selected-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.dropdown-options {
+  max-height: 14rem;
+  overflow-y: auto;
+  padding-right: 0.25rem;
+}
+
+.dropdown-empty {
+  padding-top: 0.25rem;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.calendar-toggle {
+  display: inline-flex;
+  margin-bottom: 1rem;
+  padding: 0.25rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  background: #f1f5f9;
+}
+
+.calendar-option {
+  cursor: pointer;
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  color: #334155;
+  font-size: 0.875rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.calendar-option:has(:checked) {
+  background: #4c1d95;
+  color: #ffffff;
+}
+
+.date-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.action-button {
+  border-radius: 0.5rem;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.action-button-secondary {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+}
+
+.action-button-secondary:hover {
+  background: #f8fafc;
+}
+
+.action-button-primary {
+  background: #06b6d4;
+  color: #ffffff;
+}
+
+.action-button-primary:hover {
+  background: #0891b2;
+}
+
+.dropdown-tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 0.375rem;
+  background: #f5f3ff;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6d28d9;
+}
+
+.hidden {
+  display: none;
+}
+
+#dropdown-options::-webkit-scrollbar {
+  width: 10px;
+}
+
+#dropdown-options::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+  border: 2px solid #ffffff;
+}
+
+#dropdown-options::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media (min-width: 640px) {
+  .app-header-inner,
+  .app-main {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .card-header,
+  .form-shell {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .form-actions {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 768px) {
+  .field-grid,
+  .date-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .app-header-inner,
+  .app-main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
