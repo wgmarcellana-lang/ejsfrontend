@@ -1,6 +1,7 @@
 window.initGenericModal = function initGenericModal() {
   const modal = document.getElementById("generic-modal");
 
+  // stop pag no modal
   if (!modal) {
     return;
   }
@@ -9,6 +10,7 @@ window.initGenericModal = function initGenericModal() {
   const bodyElement = modal.querySelector("[data-modal-body]");
   const footerElement = modal.querySelector("[data-modal-footer]");
 
+  // close button
   const closeModal = () => {
     modal.classList.add("hidden");
     modal.setAttribute("aria-hidden", "true");
@@ -37,6 +39,7 @@ window.initGenericModal = function initGenericModal() {
 
   modal.dataset.modalInitialized = "true";
 
+  // kapag walang declared value by default = close
   const renderButtons = (buttons = []) => {
     const resolvedButtons = buttons.length
       ? buttons
@@ -61,15 +64,18 @@ window.initGenericModal = function initGenericModal() {
       .join("");
   };
 
+  // custom
   const setBodyContent = (config) => {
     if (typeof config.bodyHtml === "string" && config.bodyHtml.trim()) {
       bodyElement.innerHTML = config.bodyHtml;
       return;
     }
 
+    // message
     bodyElement.innerHTML = `<p class="generic-modal__message">${escapeHtml(config.message || "")}</p>`;
   };
 
+  // open modal
   const showModal = (config = {}) => {
     if (titleElement) {
       titleElement.textContent = config.title || "Modal Title";
@@ -102,6 +108,7 @@ window.initGenericModal = function initGenericModal() {
     trigger.addEventListener("click", () => {
       const demoType = trigger.dataset.modalDemo;
 
+      // message
       if (demoType === "message") {
         showModal({
           title: "Test Message Modal",
@@ -110,6 +117,7 @@ window.initGenericModal = function initGenericModal() {
         return;
       }
 
+      // confirmation
       if (demoType === "confirmation") {
         showModal({
           title: "Test Confirmation Modal",
@@ -130,6 +138,7 @@ window.initGenericModal = function initGenericModal() {
         return;
       }
 
+      //custom
       showModal({
         title: "Test Custom Modal",
         bodyHtml: `
