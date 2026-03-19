@@ -214,6 +214,7 @@ body {
   background: #0891b2;
 }
 
+
 .dropdown-tag {
   display: inline-flex;
   align-items: center;
@@ -260,6 +261,7 @@ body {
     flex-direction: row;
     justify-content: flex-end;
   }
+
 }
 
 @media (min-width: 768px) {
