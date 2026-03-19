@@ -1,0 +1,75 @@
+<%
+  const modalId = typeof id !== 'undefined' && typeof id === 'string' && id ? id : 'generic-modal';
+  const modalTitle = typeof title !== 'undefined' && typeof title === 'string' ? title : 'Modal Title';
+  const modalMessage = typeof message !== 'undefined' && typeof message === 'string' ? message : '';
+  const modalBody = typeof bodyContent !== 'undefined' && typeof bodyContent === 'string' ? bodyContent : '';
+  const modalButtonsSource = typeof buttons !== 'undefined' ? buttons : [];
+  const modalButtons = Array.isArray(modalButtonsSource) && modalButtonsSource.length
+    ? modalButtonsSource
+    : [{ text: 'Close', class: 'action-button action-button-secondary', action: 'close' }];
+%>
+
+<section class="card-shell modal-demo-shell">
+  <div class="card-header">
+    <h2 class="text-xl font-semibold text-slate-900">For test only</h2>
+  </div>
+
+  <div class="modal-demo-actions">
+    <button type="button" class="action-button action-button-secondary" data-modal-demo="message">
+      Test Message Modal
+    </button>
+    <button type="button" class="action-button action-button-secondary" data-modal-demo="confirmation">
+      Test Confirmation Modal
+    </button>
+    <button type="button" class="action-button action-button-secondary" data-modal-demo="custom">
+      Test Custom Modal
+    </button>
+  </div>
+</section>
+
+<div
+  id="<%= modalId %>"
+  class="generic-modal hidden"
+  role="dialog"
+  aria-modal="true"
+  aria-hidden="true"
+  aria-labelledby="<%= `${modalId}-title` %>"
+>
+  <div class="generic-modal__overlay" data-modal-close="overlay"></div>
+
+  <div class="generic-modal__content">
+    <div class="generic-modal__header">
+      <h2 id="<%= `${modalId}-title` %>" class="generic-modal__title"><%= modalTitle %></h2>
+      <button
+        type="button"
+        class="generic-modal__icon-button"
+        data-modal-close="icon"
+        aria-label="Close modal"
+      >
+        &times;
+      </button>
+    </div>
+
+    <div class="generic-modal__body" data-modal-body>
+      <% if (modalBody) { %>
+        <%- modalBody %>
+      <% } else if (modalMessage) { %>
+        <p class="generic-modal__message"><%= modalMessage %></p>
+      <% } else { %>
+        <p class="generic-modal__message">Modal content goes here.</p>
+      <% } %>
+    </div>
+
+    <div class="generic-modal__footer" data-modal-footer>
+      <% modalButtons.forEach((button) => { %>
+        <button
+          type="button"
+          class="<%= button.class || 'action-button action-button-secondary' %>"
+          data-modal-action="<%= button.action || '' %>"
+        >
+          <%= button.text || 'Close' %>
+        </button>
+      <% }) %>
+    </div>
+  </div>
+</div>

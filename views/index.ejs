@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EJS Frontend</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/styles.css?v=20260319-2" />
 </head>
 <body class="app-body">
   <div class="app-shell">
@@ -33,10 +33,12 @@
       </section>
     </main>
   </div>
+  <%- include('components/generic-modal') %>
   <script src="/js/components/textinput.js"></script>
   <script src="/js/components/dropdown.js"></script>
   <script src="/js/components/calendar.js"></script>
   <script src="/js/components/buttons.js"></script>
-  <script src="/js/main.js"></script>
+  <script src="/js/components/generic-modal.js?v=20260319-1"></script>
+  <script src="/js/main.js?v=20260319-1"></script>
 </body>
 </html>
