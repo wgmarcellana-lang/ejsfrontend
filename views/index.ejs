@@ -9,7 +9,7 @@
 </head>
 
 <body class="min-h-screen bg-[#4b1d6b] flex items-center justify-center">
-  <main class="w-full max-w-5xl px-4">
+  <main class="w-full max-w-5xl px-4 pt-4 py-4">
     <section class="bg-white rounded-xl shadow-2xl p-8">
       <div class="mb-6">
         <h1 class="text-2xl font-semibold text-slate-900">EJS Frontend</h1>
@@ -17,7 +17,7 @@
 
       <form id="basic-form" class="space-y-6">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <%- include('components/textinput') %>
+          <%- include('components/text-input') %>
           <%- include('components/dropdown') %>
           <%- include('components/calendar') %>
         </div>
@@ -29,7 +29,7 @@
     <%- include('components/generic-modal') %>
   </main>
 
-  <script src="/js/components/textinput.js"></script>
+  <script src="/js/components/text-input.js"></script>
   <script src="/js/components/dropdown.js"></script>
   <script src="/js/components/calendar.js"></script>
   <script src="/js/components/buttons.js"></script>
